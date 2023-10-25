@@ -1,5 +1,3 @@
-package Vector3D;
-
 public class TestVector3D {
 	public static void main(String argv[]) {
 		// -- construct some vectors

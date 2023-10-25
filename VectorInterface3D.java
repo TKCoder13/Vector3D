@@ -1,4 +1,3 @@
-package Vector3D;
 public interface VectorInterface3D {
     /**
      * These constants are used whenever a method requires
@@ -36,7 +35,7 @@ public interface VectorInterface3D {
 	 *     this.Z = this.Z + parameter.Z
 	 * @param rhs	Addend of the operation
 	 */
-	public abstract VectorInterface3D Add(VectorInterface3D rhs);
+	public abstract VectorInterface3D add(VectorInterface3D rhs);
 
 	/**
 	 * Subtract the parameter (subtrahend) from this (minuend) and
@@ -46,7 +45,7 @@ public interface VectorInterface3D {
 	 *     this.Z = this.Z - parameter.Z
 	 * @param rhs	Subtrahend of the operation
 	 */
-    	public abstract VectorInterface3D Subtract(VectorInterface3D rhs);
+    	public abstract VectorInterface3D subtract(VectorInterface3D rhs);
 
 	/**
 	 * Multiply this by a scalar value and return a new Vector
@@ -55,7 +54,7 @@ public interface VectorInterface3D {
 	 *     this.Z = parameter * Z
 	 * @param value	Scalar for multiplication
 	 */
-	public abstract VectorInterface3D Multiply(double value);
+	public abstract VectorInterface3D multiply(double value);
 
 	/**
 	 * Compute the dot product between this and the parameter. Dot product of
@@ -64,7 +63,7 @@ public interface VectorInterface3D {
 	 * @param rhs	Second operand 
 	 * @return		A double representing the dot product of this and the parameter
 	 */
-	public abstract double Dot(VectorInterface3D rhs);
+	public abstract double dot(VectorInterface3D rhs);
 
 	/**
 	 * Compute the cross product between this and the parameter as a new vector.
@@ -74,14 +73,14 @@ public interface VectorInterface3D {
 	 *   this.Z = (this.X * parameter.Y) - (this.Y * parameter.X)
 	 * @param rhs	Second operand 
 	 */
-	public abstract VectorInterface3D Cross(VectorInterface3D rhs);
+	public abstract VectorInterface3D cross(VectorInterface3D rhs);
 
 	/**
 	 * Retrieves the length (norm) of this.
 	 * norm = sqrt(this.X * this.X + this.Y * this.Y + this.Z * this.Z)
 	 * @return	A double representing the length (norm) of the vector
 	 */
-	public abstract double Norm();
+	public abstract double norm();
 
 	/**
 	 * Return a unit vector representation of this. Unit vector is defined as
@@ -90,42 +89,42 @@ public interface VectorInterface3D {
 	 *     this.Z = this.Z / this.Norm()
 	 * @return	A Vector representing the unit vector of this
 	 */
-	public abstract VectorInterface3D Unit();
+	public abstract VectorInterface3D unit();
 
 	/**
 	 * Return the angle between this and the parameter vector
 	 * @param rhs
 	 * @return	The angle between the this and the parameter in radians
 	 */
-	public abstract double AngleBetween(VectorInterface3D rhs);
+	public abstract double angleBetween(VectorInterface3D rhs);
 
 	/**
 	 * Return the direction angle of this
 	 * @param comp specifies which of the 3 direction angles to compute
 	 * @return	The requested direction angle in radians
 	 */
-	public abstract double DirectionAngle(COMPONENTS comp);
+	public abstract double directionAngle(COMPONENTS comp);
 
 	/**
 	 * Determine if this and the parameter vector are parallel
 	 * @param rhs
 	 * @return	true if this and the parameter are parallel, false otherwise
 	 */
-	public abstract boolean Parallel(VectorInterface3D rhs);
+	public abstract boolean parallel(VectorInterface3D rhs);
 
 	/**
 	 * Determine if this and the parameter vector are anti-parallel
 	 * @param rhs
 	 * @return		true if this and the parameter  are anti-parallel, false otherwise
 	 */
-	public abstract boolean AntiParallel(VectorInterface3D rhs);
+	public abstract boolean antiParallel(VectorInterface3D rhs);
 
 	/**
 	 * Project this onto the parameter vector and return the resulting vector
 	 * @param rhs
 	 * @return	The projection length of this onto the parameter
 	 */
-	public abstract VectorInterface3D Projection(VectorInterface3D rhs);
+	public abstract VectorInterface3D projection(VectorInterface3D rhs);
 
 
 }

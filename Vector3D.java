@@ -1,8 +1,4 @@
 public class Vector3D implements VectorInterface3D {
-    
-    private double x;
-    private double y;
-    private double z;
 
     public Vector3D() {
         this.XCOMPONENT = 0;
