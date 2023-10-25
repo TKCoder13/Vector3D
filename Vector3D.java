@@ -3,12 +3,10 @@ public class Vector3D implements VectorInterface3D {
     private double x;
     private double y;
     private double z;
+    private COMPONENTS.XCOMPONENT;
 
-    private COMPONENTS (int x, int y, int z) {
-        this.XCOMPONENT = x;
-    }
     public Vector3D() {
-        this.XCOMPONENT = 0;
+        COMPONENTS.XCOMPONENT = 0;
         this.YCOMPONENT = 0;
         this.ZCOMPONENT = 0;
     }
