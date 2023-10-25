@@ -1,5 +1,12 @@
 public class Vector3D implements VectorInterface3D {
 
+    private double x;
+    private double y;
+    private double z;
+
+    private COMPONENTS (int x, int y, int z) {
+        this.XCOMPONENT = x;
+    }
     public Vector3D() {
         this.XCOMPONENT = 0;
         this.YCOMPONENT = 0;
@@ -23,7 +30,7 @@ public class Vector3D implements VectorInterface3D {
     }
 
     public void set(COMPONENTS component, double value) {
-        this.component = value;
+        COMPONENTS.component = value;
     }
 
 }
