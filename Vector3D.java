@@ -1,12 +1,11 @@
 public class Vector3D implements VectorInterface3D {
-
+    
     private double x;
     private double y;
     private double z;
-    private COMPONENTS.XCOMPONENT;
 
     public Vector3D() {
-        COMPONENTS.XCOMPONENT = 0;
+        this.XCOMPONENT = 0;
         this.YCOMPONENT = 0;
         this.ZCOMPONENT = 0;
     }
@@ -28,7 +27,54 @@ public class Vector3D implements VectorInterface3D {
     }
 
     public void set(COMPONENTS component, double value) {
-        COMPONENTS.component = value;
+        this.component = value;
     }
 
+    public VectorInterface3D add(VectorInterface3D rhs) {
+
+    }
+
+    public VectorInterface3D subtract(VectorInterface3D rhs) {
+
+    }
+
+    public VectorInterface3D multiply(double value) {
+
+    }
+
+    public double dot(VectorInterface3D rhs) {
+
+    }
+
+    public VectorInterface3D cross(VectorInterface3D rhs) {
+
+    }
+
+    public double norm() {
+
+    }
+
+    public VectorInterface3D unit() {
+
+    }
+
+    public double angleBetween(VectorInterface3D rhs) {
+
+    }
+
+    public double directionAngle(COMPONENTS comp) {
+
+    }
+
+    public boolean parallel(VectorInterface3D rhs) {
+
+    }
+
+    public boolean antiParallel(VectorInterface3D rhs) {
+
+    }
+
+    public VectorInterface3D projection(VectorInterface3D rhs) {
+        
+    }
 }
