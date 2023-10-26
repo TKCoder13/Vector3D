@@ -45,15 +45,27 @@ public class Vector3D implements VectorInterface3D {
     }
 
     public VectorInterface3D add(VectorInterface3D rhs) {
-        
+        double xSum = this.x + rhs.get(COMPONENTS.XCOMPONENT);
+        double ySum = this.y + rhs.get(COMPONENTS.YCOMPONENT);
+        double zSum = this.z + rhs.get(COMPONENTS.ZCOMPONENT);
+        VectorInterface3D sum = new Vector3D(xSum, ySum, zSum);
+        return sum;
     }
 
     public VectorInterface3D subtract(VectorInterface3D rhs) {
-
+        double xDiff = this.x - rhs.get(COMPONENTS.XCOMPONENT);
+        double yDiff = this.y - rhs.get(COMPONENTS.YCOMPONENT);
+        double zDiff = this.z - rhs.get(COMPONENTS.ZCOMPONENT);
+        VectorInterface3D difference = new Vector3D(xDiff, yDiff, zDiff);
+        return difference;
     }
 
     public VectorInterface3D multiply(double value) {
-
+        double xProduct = this.x * value;
+        double yProduct = this.y * value;
+        double zProduct = this.z * value;
+        VectorInterface3D product = new Vector3D(xProduct, yProduct, zProduct);
+        return product;
     }
 
     public double dot(VectorInterface3D rhs) {
