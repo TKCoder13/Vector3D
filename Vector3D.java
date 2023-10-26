@@ -35,11 +35,17 @@ public class Vector3D implements VectorInterface3D {
     }
 
     public void set(COMPONENTS component, double value) {
-        this.component = value;
+        if (component == COMPONENTS.XCOMPONENT) {
+            this.x = value;
+        } else if (component == COMPONENTS.YCOMPONENT) {
+            this.y = value;
+        } else if (component == COMPONENTS.ZCOMPONENT) {
+            this.z = value;
+        }
     }
 
     public VectorInterface3D add(VectorInterface3D rhs) {
-
+        
     }
 
     public VectorInterface3D subtract(VectorInterface3D rhs) {
