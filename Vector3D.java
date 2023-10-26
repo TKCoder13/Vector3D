@@ -5,25 +5,33 @@ public class Vector3D implements VectorInterface3D {
     private double z;
 
     public Vector3D() {
-        this.XCOMPONENT = 0;
-        this.YCOMPONENT = 0;
-        this.ZCOMPONENT = 0;
+        this.x = 0;
+        this.y = 0;
+        this.z = 0;
     }
 
     public Vector3D(double inputX, double inputY, double inputZ) {
-        this.XCOMPONENT = inputX;
-        this.YCOMPONENT = inputY;
-        this.ZCOMPONENT = inputZ;
+        this.x = inputX;
+        this.y = inputY;
+        this.z = inputZ;
     }
 
     public Vector3D(Vector3D src) {
-        this.XCOMPONENT = src.XCOMPONENT;
-        this.YCOMPONENT = src.YCOMPONENT;
-        this.ZCOMPONENT = src.ZCOMPONENT;
+        this.x = src.x;
+        this.y = src.y;
+        this.z = src.z;
     }
 
     public double get(COMPONENTS component) {
-        return this.component;
+        double output = 0;
+        if (component == COMPONENTS.XCOMPONENT) {
+            output = this.x;
+        } else if (component == COMPONENTS.YCOMPONENT) {
+            output = this.y;
+        } else if (component == COMPONENTS.ZCOMPONENT) {
+            output = this.z;
+        }
+        return output;
     }
 
     public void set(COMPONENTS component, double value) {
@@ -75,6 +83,6 @@ public class Vector3D implements VectorInterface3D {
     }
 
     public VectorInterface3D projection(VectorInterface3D rhs) {
-        
+
     }
 }
