@@ -69,11 +69,21 @@ public class Vector3D implements VectorInterface3D {
     }
 
     public double dot(VectorInterface3D rhs) {
-
+        double dotProduct = (this.x * rhs.get(COMPONENTS.XCOMPONENT))
+            + (this.y * rhs.get(COMPONENTS.YCOMPONENT))
+            + (this.z * rhs.get(COMPONENTS.ZCOMPONENT));
+        return dotProduct;
     }
 
     public VectorInterface3D cross(VectorInterface3D rhs) {
-
+        double xCross = (this.y * rhs.get(COMPONENTS.ZCOMPONENT)) - 
+            (this.z * rhs.get(COMPONENTS.YCOMPONENT));
+        double yCross = (this.z * rhs.get(COMPONENTS.XCOMPONENT)) - 
+            (this.x * rhs.get(COMPONENTS.ZCOMPONENT));
+        double zCross = (this.x * rhs.get(COMPONENTS.YCOMPONENT)) - 
+            (this.y * rhs.get(COMPONENTS.XCOMPONENT));
+        VectorInterface3D crossProduct = new Vector3D(xCross, yCross, zCross);
+        return crossProduct;
     }
 
     public double norm() {
