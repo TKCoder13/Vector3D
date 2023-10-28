@@ -87,15 +87,22 @@ public class Vector3D implements VectorInterface3D {
     }
 
     public double norm() {
-
+        double norm = Math.sqrt(
+            this.x * this.x + this.y * this.y + this.z * this.z
+        );
+        return norm;
     }
 
     public VectorInterface3D unit() {
-
+        double unitX = this.x / this.norm();
+        double unitY = this.y / this.norm();
+        double unitZ = this.z / this.norm();
+        VectorInterface3D unitVector = new Vector3D(unitX, unitY, unitZ);
+        return unitVector;
     }
 
     public double angleBetween(VectorInterface3D rhs) {
-
+        
     }
 
     public double directionAngle(COMPONENTS comp) {
