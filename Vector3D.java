@@ -102,11 +102,19 @@ public class Vector3D implements VectorInterface3D {
     }
 
     public double angleBetween(VectorInterface3D rhs) {
-        
+        // 1. Find the dot product
+        // 2. Divide the dot product by the magnitude of each vector
+        // 3. Take the inverse cosine of the result to find angle
+        double mag1 = this.norm();
+        double mag2 = rhs.norm();
+        double result = this.dot(rhs) / (mag1 * mag2);
+        // -- Figure out if it returns radians or degrees
+        double angle = Math.acos(result);
+        return angle;
     }
 
     public double directionAngle(COMPONENTS comp) {
-
+        
     }
 
     public boolean parallel(VectorInterface3D rhs) {
