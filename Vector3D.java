@@ -114,18 +114,31 @@ public class Vector3D implements VectorInterface3D {
     }
 
     public double directionAngle(COMPONENTS comp) {
-        
+        return 0.0;
     }
 
     public boolean parallel(VectorInterface3D rhs) {
-
+        if (this.dot(rhs) == 0)
+            return true;
+        return false;
     }
 
     public boolean antiParallel(VectorInterface3D rhs) {
-
+        double output = this.dot(rhs) / (this.norm() * rhs.norm());
+        if (output == -1) 
+            return true;
+        return false;
     }
 
     public VectorInterface3D projection(VectorInterface3D rhs) {
-
+        double numerator = this.dot(rhs);
+        double denominator = rhs.norm();
+        double scalar = numerator / denominator;
+        VectorInterface3D output = new Vector3D(
+            scalar * rhs.get(COMPONENTS.XCOMPONENT),
+            scalar * rhs.get(COMPONENTS.YCOMPONENT),
+            scalar * rhs.get(COMPONENTS.ZCOMPONENT)
+        );
+        return output;
     }
 }
