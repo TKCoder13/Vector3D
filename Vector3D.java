@@ -141,4 +141,12 @@ public class Vector3D implements VectorInterface3D {
         );
         return output;
     }
+
+    public String toString() {
+        return "";
+    }
+
+    public boolean equals(Object obj) {
+        return false;
+    }
 }
