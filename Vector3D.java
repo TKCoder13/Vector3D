@@ -118,7 +118,7 @@ public class Vector3D implements VectorInterface3D {
     }
 
     public boolean parallel(VectorInterface3D rhs) {
-        if (this.dot(rhs) == 0)
+        if (this.dot(rhs) == 0.0)
             return true;
         return false;
     }
@@ -144,10 +144,18 @@ public class Vector3D implements VectorInterface3D {
 
     @Override
     public String toString() {
-        return "<" + this.x + "," + this.y + "," + this.z + ">";
+        return "<" + this.x + ", " + this.y + ", " + this.z + ">";
     }
 
+    @Override
     public boolean equals(Object obj) {
+        if (obj instanceof VectorInterface3D) {
+            Vector3D test = (Vector3D) obj;
+            if (this.x == test.get(COMPONENTS.XCOMPONENT) && 
+            this.y == test.get(COMPONENTS.YCOMPONENT) && 
+            this.z == test.get(COMPONENTS.ZCOMPONENT))
+                return true;
+        }
         return false;
     }
 }
