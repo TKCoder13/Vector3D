@@ -142,8 +142,9 @@ public class Vector3D implements VectorInterface3D {
         return output;
     }
 
+    @Override
     public String toString() {
-        return "";
+        return "<" + this.x + "," + this.y + "," + this.z + ">";
     }
 
     public boolean equals(Object obj) {
