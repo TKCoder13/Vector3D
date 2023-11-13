@@ -119,8 +119,9 @@ public class Vector3D implements VectorInterface3D {
 
     public boolean parallel(VectorInterface3D rhs) {
         double output = this.dot(rhs) / (this.norm() * rhs.norm());
-        if (output == 1)
+        if ((float) output == 1) {
             return true;
+        }
         return false;
     }
 
