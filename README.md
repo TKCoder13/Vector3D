@@ -2,5 +2,5 @@
 
 - [x] toString()
 - [x] equals()
-- [] parallel() {how to diff between parallel and antiparallel}
-- [] directionAngle() {what does this mean?}
+- [x] parallel() {how to diff between parallel and antiparallel}
+- [x] directionAngle() {what does this mean?}

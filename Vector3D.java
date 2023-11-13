@@ -114,7 +114,15 @@ public class Vector3D implements VectorInterface3D {
     }
 
     public double directionAngle(COMPONENTS comp) {
-        return 0.0;
+        Vector3D i = new Vector3D();
+        if (comp == COMPONENTS.XCOMPONENT) {
+            i = new Vector3D(1,0,0);
+        } else if (comp == COMPONENTS.YCOMPONENT) {
+            i = new Vector3D(0,1,0);
+        } else if (comp == COMPONENTS.ZCOMPONENT) {
+            i = new Vector3D(0,0,1);
+        }
+        return Math.acos(this.dot(i)/(this.norm() * i.norm()));
     }
 
     public boolean parallel(VectorInterface3D rhs) {
